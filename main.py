@@ -46,7 +46,7 @@ colors = ['green', 'darkcyan', 'blue', 'magenta', 'red', 'purple', 'orange']
 
 markers = ['o', '^', '.', ',', 'v', '>', '<', '1', '2', '3']
 
-linestyles = ['solid', 'dotted', 'dashed', 'dashdot']    
+linestyles = ['solid', 'dotted', 'dashed', 'dashdot']
 
 linewidth, marker_size = 1, 0
 
@@ -64,7 +64,9 @@ for func, color, marker, linestyle in zip(to_be_plotted, colors, markers, linest
     
     data = dcc.DataContainer(x, y)
     
-    data.plot(color=color, marker=marker, linestyle=linestyle, linewidth=linewidth, 
+    fig, axis = plt.subplots(1, 1, layout="constrained", figsize=(10,6))
+    
+    data.plot(fig=fig, ax=axis, color=color, marker=marker, linestyle=linestyle, linewidth=linewidth, 
               markersize=marker_size, label=title, title=title, text = text)
 
     plt.show()
