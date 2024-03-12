@@ -5,8 +5,6 @@ Created on Wed Feb 28 12:26:01 2024
 @author: romas
 """
 
-
-
 import inspect as insp
 
 import matplotlib.pyplot as plt
@@ -15,7 +13,7 @@ import math as m
 
 import functions_to_plot as ftp
 
-import data_containter_class as dcc
+import data_container_class as dcc
 
 
 
